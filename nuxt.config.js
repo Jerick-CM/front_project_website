@@ -56,7 +56,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -69,6 +69,60 @@ export default {
         }
       }
     }
+  },
+  auth: {
+    // token: {
+    //   prefix: '_token.'
+    // },
+    // localStorage: {
+    //   prefix: 'auth.'
+    // },
+    strategies: {
+      google: {
+        scope: [
+          "openid",
+          "profile",
+          "email",
+          "https://www.googleapis.com/auth/gmail.metadata"
+        ],
+        clientId:
+          "14757956463-i7pn4r8arrel30q04rh9htcmnf1aoaot.apps.googleusercontent.com",
+        codeChallengeMethod: "",
+        responseType: "code",
+        // grantType: "client_credentials",
+        // redirectUri: "http://localhost"
+      },
+      laravelSanctum: {
+        provider: "laravel/sanctum",
+        //  url: 'http://localhost:8000',
+        url: 'http://back.api.test:3001',
+        // url: "http://back.api.test",
+        endpoints: {
+          login: {
+            url: "/api/login"
+          },
+
+          logout: {
+            url: "/api/logout"
+          }
+          //   user: {
+          //     url: '/api/user', method: 'get', propertyName: 'data'
+          //   },
+        }
+      }
+    },
+    redirect: {
+      login: "/login",
+      // login: "/",
+      logout: "/",
+      // callback: '/login',
+      home: "/dashboard"
+    }
+  },
+  axios: {
+    // baseURL: process.env.BASE_URL || "http://back.api.test",
+    baseURL: "http://back.api.test:3001",
+    credentials: true
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

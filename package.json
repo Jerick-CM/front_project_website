@@ -16,7 +16,8 @@
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.9.1",
     "nprogress": "^0.2.0",
-    "nuxt": "^2.15.3"
+    "nuxt": "^2.15.3",
+    "vuelidate": "^0.7.6"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.3",
