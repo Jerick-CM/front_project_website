@@ -17,11 +17,15 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
-# front_project_website
+
+## front end nuxt project 
 
 
 ```bash
+
+
 # install dependencies
 $ npm install
+
+
 ```
